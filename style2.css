@@ -1,0 +1,61 @@
+*{
+    box-sizing:border-box;
+}
+.navbar {
+    display: flex;
+    background-color: #167;
+
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 90px;
+    text-decoration: none;
+    text-align: center;
+    transition-duration: 0.2s;
+}
+.navbar p {
+    color: white;
+    padding: 14px 80px;
+    text-align: center;
+    transition-duration: 0.2s;
+}
+.navbar a:hover {
+    background-color: lightgray;
+
+    color: black;
+
+}
+.navbar p:hover {
+    background-color: lightgray;
+
+    color: black;
+
+}
+ 
+ 
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.about{
+    text-align: center;
+}
+@media screen and (max-width:600px) {
+
+    .navbar,
+    .row {
+        flex-direction: column;
+    }
+    .navbar a{
+        padding: 14px 110px;
+    }
+    .navbar a:hover {
+        background-color: lightgray;
+    
+        color: black;
+    
+    }
+}
