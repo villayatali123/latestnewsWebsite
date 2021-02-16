@@ -1,4 +1,4 @@
-console.log("Project Title - News Api");
+// console.log("Project Title - News Api");
 
 // ba5376ad46c74f7f8bee8854ab39ae9b    API KEY
 // R2BBmPZTAjFbg2oL9lVP93dg3zY58pKmlaO7ij6la8iTszRx4LKiJgKqhDZA  API KEY 2
@@ -14,11 +14,12 @@ xhr.onload = function () {
     if (this.status === 200) {
         // console.log(this.responseText);
         let json = JSON.parse(this.responseText);
-        console.log(json);
+        // console.log(json);
         let articles = json.articles;
         let html = "";
         articles.forEach(element => {
             let news = `<div class="jumbotron newsBlock2" >
+            <img src="${element['urlToImage']}" class="card-img-top" height="300px" alt="...">
             <h5 class="display-6" id="newsHeading">${element["title"]}</h5>
                 <p class="lead" id="newsContent">${element["content"]}.</p>
                 <br>

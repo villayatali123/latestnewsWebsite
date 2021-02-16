@@ -1,5 +1,7 @@
 <?php
+header("Access-Control-Allow-Origin: *")?>
+<?php
 
-include_once("indexHome.html");
+include_once("index_p1.html");
 ?>
  

@@ -1,4 +1,4 @@
-console.log("Project Title - News Api");
+// console.log("Project Title - News Api");
 
 // ba5376ad46c74f7f8bee8854ab39ae9b    API KEY
 // R2BBmPZTAjFbg2oL9lVP93dg3zY58pKmlaO7ij6la8iTszRx4LKiJgKqhDZA  API KEY 2
@@ -15,10 +15,11 @@ xhr.onload = function () {
         // console.log(this.responseText);
         let json = JSON.parse(this.responseText);
         let articles = json.articles;
-        console.log(articles);
+        // console.log(articles);
         let html = "";
         articles.forEach(element => {
             html += `<div class=" newsBlock jumbotron" >
+            <img src="${element['urlToImage']}" class="card-img-top" height="300px" alt="...">
             <h5 class="display-6" id="newsHeading">${element["title"]}</h5>
                 <p class="lead" id="newsContent">${element["content"]}.</p>
                 <br>
@@ -35,33 +36,3 @@ xhr.onload = function () {
 }
 
 xhr.send();
-
-// // search news for indian news
-// let searchTxt = document.getElementById("searchText");
-
-// searchTxt.addEventListener("input", function () {
-//     let inpVal = searchTxt.Value;
-
-//     let newsBlock = document.getElementsByClassName("newsBlock");
-//     console.log(newsBlock);
-//     // let x=1;
-//     Array.from(newsBlock).forEach(function (element) {
-
-//         let title = element.getElementsByTagName("h5")[0].innerText;
-//         let content = element.getElementsByTagName("p")[0].innerText;
-//         // console.log(element);
-//         if (title.includes(inpVal)||content.includes(inpVal)) {
-
-//             console.log('input fired!');
-//             element.style.display = "";
-//         }
-//         else {
-//             console.log('input fired Also!');
-//             element.style.display = "none";
-//         }
-//         // if(x>1){
-//         //     break;
-//         // }
-//         // x++;
-//     })
-// })
